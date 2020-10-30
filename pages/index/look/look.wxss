@@ -1,0 +1,8 @@
+/* pages/index/look/look.wxss */
+
+.map_wrapper {
+   width: 90%;
+   height: 400rpx;
+   padding-top: 100rpx;
+   margin: 0 auto;
+}

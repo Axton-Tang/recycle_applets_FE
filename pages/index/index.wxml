@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="wrapper">
+    <view class="back"></view>
+    <view class="top_info_wrapper">
+        <view class="state_wrapper">
+            <view wx:if="{{connectState}}" class="state_dot_green"></view>
+            <view wx:else class="state_dot_red"></view>
+            <view>{{connectState ? '已连接' : '未连接'}}</view>
+        </view>
+        <view class="look_box_wrapper" bindtap="enterLook">
+            <text class="iconfont icon-sousuo"></text>
+            <text>查找附近回收箱</text>
+        </view>
+    </view>
+	<view class="button_wrapper">
+        <view class="button {{state ? 'button_on ' : 'button_off' }}" catchtap="openDoor">
+            <text class="iconfont icon-state {{state ? 'icon-chenggong' : 'icon-saoma'}}"></text>
+            <view class="button_info">{{state ? '开箱成功' : '扫码开箱'}}</view>
+        </view>
+        <view class="button_bottom_info">
+            <text wx:if="{{state}}">箱盖即将关闭，请尽快投递！</text>
+            <text wx:else class="iconfont icon-bangzhu">使用帮助</text>
+        </view>
+    </view> 
+    <view class="box_info_wrapper">
+        <view class="box_item_wrapper">
+            <view class="left_icon"><text class="iconfont icon-xiangbox60"></text></view>
+            <text class="surplus_title">箱体剩余\n空间情况</text>
+            <text class="surplus_info">未满</text>
+        </view>
+        <view class="box_item_wrapper">
+            <view class="left_icon"><text class="iconfont icon-xinxi"></text></view>
+            <view class="box_info_item">
+                <text wx:if="{{temp}}" class="box_info">{{temp}} ℃\n</text>
+                <text wx:else class="box_info">暂无数据</text>
+                <text class="box_info_title">温度</text>
+            </view>
+            <view class="box_info_item">
+                <text wx:if="{{humi}}" class="box_info">{{humi}} %</text>
+                <text wx:else class="box_info">暂无数据</text>
+                <text class="box_info_title">湿度</text>
+            </view>
+            <view class="box_info_item">
+                <text class="box_info">暂无数据\n</text>
+                <text class="box_info_title">病菌情况</text>
+            </view>
+        </view>
+    </view>
+</view>

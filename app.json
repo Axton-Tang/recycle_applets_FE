@@ -1,0 +1,36 @@
+{
+   "pages": [
+      "pages/index/index",
+      "pages/my/my",
+      "pages/index/look/look",
+      "pages/info/info",
+      "pages/my/record/record"
+   ],
+   "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "口罩回收箱",
+      "navigationBarTextStyle": "black"
+   },
+   "style": "v2",
+   "sitemapLocation": "sitemap.json",
+   "tabBar": {
+      "borderStyle": "#666",
+      "color": "#666",
+      "selectedColor": "#00E498",
+      "list": [
+         {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "./images/tab/home.png",
+            "selectedIconPath": "./images/tab/home_hl.png"
+         },
+         {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath": "./images/tab/my.png",
+            "selectedIconPath": "./images/tab/my_hl.png"
+         }
+      ]
+   }
+}

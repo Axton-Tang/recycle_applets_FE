@@ -1,0 +1,16 @@
+<!--pages/my/record/record.wxml-->
+
+<view class="wrapper">
+   <view class="back"></view>
+   <view class="list_title">最近记录（从新至旧排序）</view>
+   <view class="list_wrapper">
+      <view class="item_wrapper" wx:for="{{deliveryList}}" wx:for-item="item" wx:key="index">
+         <view class="state_info {{item.unusual === '1' ? 'unusual_state' : '' }}">{{item.unusual==='1' ? '异常' : '正常'}}</view>
+         <view class="shuoming_info">
+            <view class="data_time">投递时间： {{item.createdAt}}</view>
+            <view class="unusual_info">说明： {{item.comment}}</view>
+         </view>
+      </view>
+      <view wx:if="{{showLoadMore}}" class="load_more" bindtap="handleLoadMore">点击加载更多</view>
+   </view>
+</view>

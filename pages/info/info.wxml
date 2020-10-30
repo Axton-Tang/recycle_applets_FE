@@ -1,0 +1,5 @@
+<view class="container">
+	<button wx:if="false" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+		授权登录
+	</button>
+</view>

@@ -9,7 +9,7 @@
 		<view class="userInfo_username">{{nickName}}</view>
 		<view class="line"></view>
 		<view class="jifen">暂无异常情况！</view>
-	</view>
+	</view> 
 
 
 	<view class="item-wrapper">
